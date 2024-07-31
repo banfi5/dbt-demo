@@ -10,3 +10,8 @@ sources:
     schema: it_gen_prd_green_ambiente_qualita_aria
     tables:
       - name: qualita_aria
+  - name: studenti_scuola_statale_source
+    database: it-sandbx-gbs-advana-000001
+    schema: it_gen_prd_green_istruzione_studenti
+    tables:
+      - name: studenti_scuola_statale

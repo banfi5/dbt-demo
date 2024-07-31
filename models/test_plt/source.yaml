@@ -15,3 +15,13 @@ sources:
     schema: it_gen_prd_green_istruzione_studenti
     tables:
       - name: studenti_scuola_statale
+  - name: biblio_comunali_2019_source
+    database: it-sandbx-gbs-advana-000001
+    schema: it_gen_prd_green_istruzione_biblioteche
+    tables:
+      - name: biblio_comunali_2019
+  - name: biblio_comunali_2021_source
+    database: it-sandbx-gbs-advana-000001
+    schema: it_gen_prd_green_istruzione_biblioteche
+    tables:
+      - name: biblio_comunali_2021

@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: ambiente_inquinamento_source
+    database: it-sandbx-gbs-advana-000001
+    schema: it_gen_prd_green_ambiente_inquinamento
+    tables:
+      - name: ambiente_inquinamento
+  - name: qualita_aria_source
+    database: it-sandbx-gbs-advana-000001
+    schema: it_gen_prd_green_ambiente_qualita_aria
+    tables:
+      - name: qualita_aria

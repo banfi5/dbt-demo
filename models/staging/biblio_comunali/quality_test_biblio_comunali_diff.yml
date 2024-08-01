@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: biblio_comunali
+    description: Amount of enrolled children in libraries
+    columns:
+      - name: biblioteca
+        description: The id of the library. This is the primary key.
+        data_tests:
+          - not_null
+          - unique

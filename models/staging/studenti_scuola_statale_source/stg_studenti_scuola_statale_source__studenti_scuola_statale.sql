@@ -1,23 +1,27 @@
-with 
+with
 
-source as (
+    source as (
 
-    select * from {{ source('studenti_scuola_statale_source', 'studenti_scuola_statale') }}
+        select *
+        from {{ source("studenti_scuola_statale_source", "studenti_scuola_statale") }}
 
-),
+    ),
 
-renamed as (
+    renamed as (
 
-    select
-        indirizzoemailscuola,
-        coalesce (regexp_contains(
-            indirizzoemailscuola, '^[A-Za-z0-9._%+-]+@istruzione.it$'
-        )
-        = true,
-        false) as is_valid_email_address
+        select
+            indirizzoemailscuola,
+            coalesce(
+                regexp_contains(
+                    indirizzoemailscuola, '^[A-Za-z0-9._%+-]+@istruzione.it$'
+                )
+                = true,
+                false
+            ) as is_valid_email_address
 
-    from source
+        from source
 
-)
+    )
 
-select * from renamed
+select *
+from renamed
